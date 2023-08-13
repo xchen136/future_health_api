@@ -1,4 +1,4 @@
-class SupportTicketsController < ApplicationController
+class Api::V1::SupportTicketsController < ApplicationController
   before_action :set_support_ticket, only: [:update]
 
   # GET /support_tickets 
