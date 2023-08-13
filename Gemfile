@@ -3,6 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.0.0"
 
+gem "rack-cors"
+
 # Annotate Rails classes with schema and routes info
 gem 'annotate'
 
