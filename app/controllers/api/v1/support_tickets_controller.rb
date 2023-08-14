@@ -12,9 +12,9 @@ class Api::V1::SupportTicketsController < ApplicationController
     @support_ticket = SupportTicket.new(support_ticket_params)
 
     if @support_ticket.save
-      render json: @support, status: :created
+      render json:@support_ticket, status: :created
     else
-      render json: @support.errors, status: :unprocessable_entity
+      render json:@support_ticket.errors, status: :unprocessable_entity
     end
   end
 
