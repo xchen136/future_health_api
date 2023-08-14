@@ -9,4 +9,5 @@
 #  updated_at        :datetime         not null
 #
 class Response < ApplicationRecord
+  belongs_to :support_ticket
 end

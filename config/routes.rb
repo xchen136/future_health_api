@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       root "support_ticket#create"
-      resources :support_tickets, only: [:index, :create, :update]
+      resources :support_tickets, only: [:index, :create, :update] do
+          resources :responses, only: [:create]
+      end
     end
   end
 end
