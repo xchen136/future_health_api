@@ -11,5 +11,5 @@
 #  updated_at  :datetime         not null
 #
 class SupportTicket < ApplicationRecord
-  has_many :support_ticket_responses
+  has_many :responses
 end
