@@ -10,18 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_12_040540) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_12_024047) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
   enable_extension "plpgsql"
-
-  create_table "support_ticket_responses", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.uuid "support_ticket_id", null: false
-    t.text "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["support_ticket_id"], name: "index_support_ticket_responses_on_support_ticket_id"
-  end
 
   create_table "support_tickets", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "name"
@@ -32,5 +24,4 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_12_040540) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "support_ticket_responses", "support_tickets"
 end
