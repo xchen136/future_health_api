@@ -8,7 +8,7 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins "http://localhost:3001"     # the url when you run the react app
+    origins "https://future-health-frontend-926119e24201.herokuapp.com"     # the url when you run the react app
 
     resource "*",
       headers: :any,
