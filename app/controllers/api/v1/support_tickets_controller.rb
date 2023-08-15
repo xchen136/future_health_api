@@ -10,6 +10,7 @@ class Api::V1::SupportTicketsController < ApplicationController
   # POST /support_tickets 
   def create
     @support_ticket = SupportTicket.new(support_ticket_params)
+    @support_ticket.number = SupportTicket.all.length + 1
 
     if @support_ticket.save
       render json:@support_ticket, status: :created

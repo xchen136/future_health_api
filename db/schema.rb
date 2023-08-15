@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_14_174748) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_14_235719) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
   enable_extension "plpgsql"
@@ -30,6 +30,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_14_174748) do
     t.string "status", default: "new"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "number", null: false
   end
 
   add_foreign_key "responses", "support_tickets"
