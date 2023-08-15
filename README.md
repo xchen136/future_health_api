@@ -29,9 +29,9 @@ Make sure these are installed:
    2. terminal: `psql postgres`  //enter the PostgreSQL console
    3. `postgres=# CREATE ROLE future_health_api WITH CREATEDB LOGIN; ` // inside console, create role "future_health_api" with create DB access
    4. `postgres=# \du` //list all the roles to verify that new role is created
-   5. `\password future_health` //setup password for new DB role 
+   5. `\password future_health_api` //setup password for new DB role 
 2. Follow Step 4 - [Configuring and Creating Your Database](https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-ruby-on-rails-application-on-macos#step-4-configuring-and-creating-your-database)
-   1. `database.yml` - username must match the role name
+   1. `database.yml` - username must match the role name "future_health_api"
 
 <br>
 
@@ -43,7 +43,7 @@ Make sure these are installed:
 <br>
 
 ## Heroku Setup
-**Resource**: [Deploy to Heroku](https://dev.to/lizlaffitte/series/10869)
+**Resource**: [Deploy to Heroku](https://dev.to/lizlaffitte/series/10869) (There are issues with heroku-22, so currently it uses heroku-20)
 
 1. `cors.rb` - update origin to point to the url that hosts the frontend app. (ex: https://future-health-frontend-81267e8cf9e0.herokuapp.com)
 2. `Procfile` - create a file called Procfile at the root folder so Heroku will run a migration. ([source](https://www.youtube.com/watch?v=ONsUBM10ypg))
