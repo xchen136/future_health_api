@@ -10,7 +10,7 @@ Frontend ([Repository](https://github.com/xchen136/future_health_frontend)) is w
 
 <img width="2114" alt="image" src="https://github.com/xchen136/future_health_frontend/assets/31082478/f399609a-4e3f-4e09-ad7f-f38701ceb549">
 
-
+<br>
 
 ## Installations
 **My Operating System:** MacOS in Ventura 13.1 (22C65)
@@ -21,6 +21,7 @@ Make sure these are installed:
 3. Rails `7.0.7` ([source](https://guides.rubyonrails.org/getting_started.html#creating-a-new-rails-project-installing-rails-installing-rails))
 4. Bundler version `2.4.13` ([source](https://help.dreamhost.com/hc/en-us/articles/115001070131-Using-Bundler-to-install-Ruby-gems))
 
+<br>
 
 ## Setup Database
 1. Create Role and Password
@@ -31,16 +32,18 @@ Make sure these are installed:
    5. `\password future_health` //setup password for new DB role 
 2. Follow Step 4 - [Configuring and Creating Your Database](https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-ruby-on-rails-application-on-macos#step-4-configuring-and-creating-your-database)
    1. `database.yml` - username must match the role name
-  
+
+<br>
 
 ## Running Locally
 1. Install Gems - `terminal: bundle install`
 2. Run migrations - `terminal: rails db:migrate`
 3. Run rails server - `terminal: rails s`
 
+<br>
 
 ## Heroku Setup
-Source: [Deploy to Heroku] (https://dev.to/lizlaffitte/series/10869)
+**Resource**: [Deploy to Heroku](https://dev.to/lizlaffitte/series/10869)
 
 1. `cors.rb` - update origin to point to the url that hosts the frontend app. (ex: https://future-health-frontend-81267e8cf9e0.herokuapp.com)
 2. `Procfile` - create a file called Procfile at the root folder so Heroku will run a migration. ([source](https://www.youtube.com/watch?v=ONsUBM10ypg))
